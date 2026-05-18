@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<header>
+  <p class="header-eyebrow">Food Prep System</p>
+  <h1>RC <span>Labels</span></h1>
+</header>
+
+<!-- Main Card -->
+<div class="card">
+  <div class="overlay-spinner" id="mainSpinner"><div class="spinner"></div></div>
+
+  <div class="field">
+    <label for="item">Label</label>
+    <input id="item" class="awesomplete" type="text" autocomplete="off" placeholder="Search items…" />
+  </div>
+
+  <div class="field">
+    <label for="init">Your Initials</label>
+    <input id="init" type="text" maxlength="4" placeholder="e.g. BF" />
+  </div>
+
+  <div class="btn-row">
+    <button class="btn-primary" onclick="handlePreview()">&#9654; Preview Label</button>
+    <button class="btn-ghost"   onclick="openEditModal()">Edit</button>
+  </div>
+</div>
+
+<div class="bottom-actions">
+  <button class="btn-ghost" onclick="openModal('addModal')">+ Add New Item</button>
+  <button class="btn-ghost" onclick="openModal('customModal')">&#9998; Custom Label</button>
+</div>
+
+<!-- Modals -->
+{% include "partials/_modal_preview.html" %}
+{% include "partials/_modal_edit.html" %}
+{% include "partials/_modal_add.html" %}
+{% include "partials/_modal_custom.html" %}
+
+{% endblock %}
