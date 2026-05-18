@@ -94,7 +94,7 @@ select {
   padding: 0.65rem 0.9rem;
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
   outline: none;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 input:focus, select:focus {
