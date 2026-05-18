@@ -1,0 +1,26 @@
+<div class="modal-backdrop-rc" id="previewModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <p class="modal-title-rc">Label Preview</p>
+      <button class="modal-close" onclick="closeModal('previewModal')">&#x2715;</button>
+    </div>
+
+    <div class="label-preview-wrapper">
+      <div class="label-preview">
+        <div class="label-item-name" id="prevName">—</div>
+        <div class="label-use-by"   id="prevUseBy">Use By:</div>
+        <div class="label-exp-date" id="prevExpDate">—</div>
+        <div class="label-footer">
+          <span id="prevPrintDate">—</span>
+          <span id="prevInitials">—</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="preview-hint">2 &times; 2 inch &middot; Zebra ZPL</p>
+
+    <div class="modal-footer-rc" style="justify-content:center; border:none; padding-top:0.75rem;">
+      <button class="btn-cancel" onclick="closeModal('previewModal')">Close</button>
+    </div>
+  </div>
+</div>

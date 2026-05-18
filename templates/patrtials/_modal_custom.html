@@ -1,0 +1,34 @@
+<div class="modal-backdrop-rc" id="customModal">
+  <div class="modal-box">
+    <div class="overlay-spinner" id="customSpinner"><div class="spinner"></div></div>
+
+    <div class="modal-header">
+      <p class="modal-title-rc">Custom Label</p>
+      <button class="modal-close" onclick="closeModal('customModal')">&#x2715;</button>
+    </div>
+
+    <div class="field">
+      <label>Item Name</label>
+      <input id="customName" type="text" placeholder="Item Name" />
+      <div class="invalid-msg" id="customNameErr">Required</div>
+    </div>
+
+    <div class="row-fields">
+      <div>
+        <label>Expiration Date</label>
+        <input id="customExp" type="date" />
+        <div class="invalid-msg" id="customExpErr">Required</div>
+      </div>
+      <div>
+        <label>Your Initials</label>
+        <input id="customInit" type="text" maxlength="4" placeholder="e.g. BF" />
+        <div class="invalid-msg" id="customInitErr">Required</div>
+      </div>
+    </div>
+
+    <div class="modal-footer-rc">
+      <button class="btn-cancel"  onclick="closeModal('customModal')">Cancel</button>
+      <button class="btn-success" onclick="handleCustomPreview()">Preview Label</button>
+    </div>
+  </div>
+</div>

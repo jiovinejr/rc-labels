@@ -1,0 +1,45 @@
+<div class="modal-backdrop-rc" id="editModal">
+  <div class="modal-box">
+    <div class="overlay-spinner" id="editSpinner"><div class="spinner"></div></div>
+
+    <div class="modal-header">
+      <p class="modal-title-rc">Edit Label</p>
+      <button class="modal-close" onclick="closeModal('editModal')">&#x2715;</button>
+    </div>
+
+    <div class="field">
+      <label>Item Name</label>
+      <input id="editName" type="text" placeholder="Item Name" />
+      <div class="invalid-msg" id="editNameErr">Required</div>
+    </div>
+
+    <div class="field">
+      <label>Category</label>
+      <select id="editCategory">
+        {% for cat in categories %}<option>{{ cat }}</option>{% endfor %}
+      </select>
+    </div>
+
+    <div class="row-fields">
+      <div>
+        <label>Time Amount</label>
+        <input id="editAmt" type="number" min="1" placeholder="e.g. 7" />
+        <div class="invalid-msg" id="editAmtErr">Required</div>
+      </div>
+      <div>
+        <label>Unit</label>
+        <select id="editDenom">
+          <option>Days</option>
+          <option>Weeks</option>
+          <option>Months</option>
+          <option>Years</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="modal-footer-rc">
+      <button class="btn-cancel"  onclick="closeModal('editModal')">Cancel</button>
+      <button class="btn-success" onclick="submitEdit()">Save Changes</button>
+    </div>
+  </div>
+</div>

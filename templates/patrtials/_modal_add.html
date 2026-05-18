@@ -1,0 +1,52 @@
+<div class="modal-backdrop-rc" id="addModal">
+  <div class="modal-box">
+    <div class="overlay-spinner" id="addSpinner"><div class="spinner"></div></div>
+
+    <div class="modal-header">
+      <p class="modal-title-rc">Add New Item</p>
+      <button class="modal-close" onclick="closeModal('addModal')">&#x2715;</button>
+    </div>
+
+    <div class="field">
+      <label>Item Name</label>
+      <input id="addName" type="text" placeholder="e.g. Herb Butter" />
+      <div class="invalid-msg" id="addNameErr">Required</div>
+    </div>
+
+    <div class="field">
+      <label>Category</label>
+      <select id="addCategory">
+        {% for cat in categories %}
+        <option {% if cat == 'Misc' %}selected{% endif %}>{{ cat }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="row-fields">
+      <div>
+        <label>Time Amount</label>
+        <input id="addAmt" type="number" min="1" value="2" />
+      </div>
+      <div>
+        <label>Unit</label>
+        <select id="addDenom">
+          <option>Days</option>
+          <option selected>Weeks</option>
+          <option>Months</option>
+          <option>Years</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Your Initials</label>
+      <input id="addInit" type="text" maxlength="4" placeholder="e.g. BF" />
+      <div class="invalid-msg" id="addInitErr">Required</div>
+    </div>
+
+    <div class="modal-footer-rc">
+      <button class="btn-cancel"  onclick="closeModal('addModal')">Cancel</button>
+      <button class="btn-success" onclick="addToDB()">Add Item</button>
+    </div>
+  </div>
+</div>
