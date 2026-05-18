@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS items (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    category TEXT NOT NULL,
+    use_by TEXT NOT NULL DEFAULT 'Use By:',
+    time_amt INTEGER NOT NULL,
+    denom TEXT NOT NULL,
+    initials TEXT NOT NULL
+);
